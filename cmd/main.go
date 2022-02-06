@@ -13,10 +13,10 @@ func main() {
 	// TODO: go 1.5からはこのコードは不要
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	// meander.APIKey = "TODO"
-	http.HandleFunc("/jouneys", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/journeys", func(w http.ResponseWriter, r *http.Request) {
 		respond(w, r, meander.Journeys)
 	})
-	http.ListenAndServe(":8080", http.DefaultServeMux)
+	http.ListenAndServe(":8081", http.DefaultServeMux)
 }
 
 func respond(w http.ResponseWriter, r *http.Request, data []interface{}) error {
