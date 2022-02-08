@@ -27,3 +27,14 @@ type googlePhotos struct {
 }
 
 var APIKey string
+
+func (p *Place) Public() interface{} {
+	return map[string]interface{}{
+		"name":     p.Name,
+		"icon":     p.Icon,
+		"photos":   p.Photos,
+		"vicinity": p.Vicinity,
+		"lat":      p.Lat,
+		"lng":      p.Lng,
+	}
+}
