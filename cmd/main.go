@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	// プログラムから使用できる最大にCPU数を指定できる
 	err := godotenv.Load("../.env")
 	if err != nil {
 		panic("Error loading .env file")
