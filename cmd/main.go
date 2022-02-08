@@ -14,7 +14,7 @@ func main() {
 	// プログラムから使用できる最大にCPU数を指定できる
 	// TODO: go 1.5からはこのコードは不要
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	err := godotenv.Load(".env")
+	err := godotenv.Load("../.env")
 	if err != nil {
 		panic("Error loading .env file")
 	}
